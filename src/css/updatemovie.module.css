@@ -1,0 +1,82 @@
+/* addmovie.module.css */
+.formholder {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+  }
+  
+  .formholder h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .formholder hr {
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ced4da;
+  }
+  
+  .formitems {
+    margin-bottom: 15px;
+  }
+  
+  .formitems label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057;
+    font-weight: bold;
+  }
+  
+  .formitems input[type="text"],
+  .formitems select,
+  .formitems textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .formitems textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  #rating {
+    margin-bottom: 20px;
+  }
+  
+  #btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #btn button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  #btn button:first-of-type {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  #btn button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  #btn button:hover {
+    opacity: 0.9;
+  }
+  
