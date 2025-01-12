@@ -64,7 +64,7 @@ const Updatemovie = () => {
                 </div>
                 <div className={STYLE.formitems} id={STYLE.btn}>
                     <button type="submit">UPDATE MOVIE</button>
-                    <button type="button" onClick={() => navigate("/viewmovie")}>CANCEL</button>
+                    <button type="button" onClick={() => {toast.warning("Movie Updation canceled"); navigate("/viewmovie")}}>CANCEL</button>
                 </div>
             </form>
         </div>

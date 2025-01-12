@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Style from '../css/addmovie.module.css'
 import axiosinst from './axios'
+import { toast } from 'react-toastify'
 
 function Addmovies() {
 
@@ -8,13 +9,22 @@ function Addmovies() {
 
   const data = (e) => {
     setmoviedata({ ...moviedata, [e.target.name]: e.target.value })
-  }
+  };
 
   const handle = (e) => {
     e.preventDefault();
-    let payload = moviedata;
-    axiosinst.post("/post", payload)
-  }
+    try {
+      let payload = moviedata;
+      axiosinst.post("/post", payload);
+      toast.success("Submitted");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handlecancel = () => {
+    toast.warning("Submission Canceled");
+  };
 
   return (
     <div className={Style.formholder}>
@@ -63,7 +73,7 @@ function Addmovies() {
         </div>
         <div className={Style.movieitems}>
           <button>Submit</button>
-          <button>Cancel</button>
+          <button type='button' onClick={handlecancel}>Cancel</button>
         </div>
       </form>
     </div>
